@@ -1,9 +1,17 @@
-const currentUrl = window.location.pathname;
+const path = window.location.pathname;
 
-if (currentUrl === '/') {
-    document.querySelector('#menu-home').className = 'nav-link text-white active';
-} else if (currentUrl === '/noticias') {
-    document.querySelector('#menu-noticias').className = 'nav-link text-white active';
-} else if (currentUrl === '/admin') {
-   document.querySelector('#menu-admin').className = 'nav-link text-white active';
-}
+if (path === '/') {
+const getCheckbox = document.querySelectorAll(`input[type='checkbox']`);
+const getTasks = document.querySelectorAll(`.task-name`);
+
+getCheckbox.forEach((value, index) => {
+    getCheckbox[index].addEventListener('change', () => {
+        if(getCheckbox[index].checked) {
+            getTasks[index].classList.add('checked');
+        } else {
+            getTasks[index].classList.remove('checked');
+        };
+    });
+});
+
+};
