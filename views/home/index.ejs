@@ -1,0 +1,38 @@
+<%- include('../includes/header')%>
+<%- include('../includes/nav')%>
+
+<main>
+  <div class="bg-light pt-3 mb-4">
+    <div class="container text-center">
+      <img id="logo" class="img-fluid" src="/img/task-list.png">
+      <h1 class="my-2 my-sm-0">Lista de Tarefas</h1>
+    </div>
+  </div>
+<div class="container container-fluid">
+  <table class="table">
+    <thead>
+      <tr class="text-center">
+        <th>Concluído?</th>
+        <th>Tarefa</th>
+        <th>Ações</th>
+      </tr>
+    </thead>
+    <% tasks.forEach(task =>  { %>
+    <tbody>
+      <tr class="text-center">
+        <th scopre="row"><input type="checkbox"></th>
+        <td scope="col"><%= task.tarefa%> </td>
+        <td scope="col">
+          <a class="btn btn-large btn-primary w-100 w-sm-50 my-1" href="/tarefa/<%= task.id_tarefa%>">Detalhes</a><br>
+          <a class="btn btn-large btn-warning w-100 w-sm-50" href="/edit/<%= task.id_tarefa%>">Editar</a>
+          <a class="btn btn-large btn-danger w-100 w-sm-50" href="/del/<%= task.id_tarefa%>">Deletar</a><br>
+        </td>
+      </tr>
+    </tbody>
+    <% }); %>
+  </table>
+</div>
+
+</main>
+
+<%- include('../includes/footer')%>

@@ -1,0 +1,39 @@
+<%- include('../includes/header')%>
+<%- include('../includes/nav')%>
+
+<main class="mb-4">
+    <div class="bg-light p-4">
+        <div class="container text-center">
+            <h1>Nova Tarefa</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card my-5">    
+                    <form class="card-body cardbody-color p-lg-5" action="/tarefas/salvar-tarefa" method="POST">
+                        <div class="text-center">
+                            <img src="/img/task-add.png" class="img-fluid task-form-img my-3" alt="logo-tarefa">
+                        </div>
+    
+                        <div class="my-3">
+                            <label for="titulo" class="form-label">Nome da Tarefa</label>
+                            <input type="text" id="titulo" name="titulo" class="form-control" autocomplete="off" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descricao" class="form-label">Descrição</label>
+                            <textarea name="descricao" id="descricao" cols="30" rows="5" class="form-control" style="resize: none;" required></textarea>
+                        </div>
+                
+                        <button type="submit" class="btn btn-success mb-5">Criar Tarefa</button>
+                        <a href="/" class="btn btn-danger mb-5">Voltar</a>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</main>
+
+<%- include('../includes/footer')%>

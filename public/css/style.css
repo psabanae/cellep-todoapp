@@ -1,3 +1,76 @@
-.logo {
-    width: 64px;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Roboto:wght@400;700;900&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Merriweather', sans-serif;
+}
+
+.navbar-bg-color {
+    background-color: #74A7F7;
+}
+
+.underline {
+    background-image: linear-gradient(90deg, #e67399, #f2a640);
+    background-position: center bottom;
+    background-size: 40% 30%;
+    background-repeat: no-repeat;
+}
+
+
+.detail {
+    font-size: 1.3rem;
+}
+
+li {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+#logo {
+    height: 150px;
+    width: 150px;
+}
+
+.btn-color {
+    background-color: #0E1C36;
+    color: #FAFAFA;
+    
+}
+  
+.task-form-img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+  
+  
+  
+.cardbody-color {
+    background-color: #EBF2FA;
+}
+  
+a {
+    text-decoration: none;
+}
+
+#id-tarefa {
+    display:none;
 }
